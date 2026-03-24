@@ -1,3 +1,4 @@
+
 strName = "Not Class Member"
 
 class DemoString:
@@ -6,7 +7,7 @@ class DemoString:
     def set(self, msg):
         self.strName = msg
     def print(self):
-        print(strName)
+        print(self.strName)
 
 d = DemoString()
 d.set("First Message")
