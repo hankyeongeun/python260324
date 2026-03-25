@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5, CSS3, JavaScript 공부 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML5, CSS3, JavaScript 공부</h1>
+        <p>이 페이지는 HTML5, CSS3, JavaScript의 기본을 보여줍니다.</p>
+        <button id="changeButton">클릭하세요!</button>
+        <p id="message">버튼을 클릭하면 메시지가 바뀝니다.</p>
+    </div>
+
+    <script>
+        document.getElementById('changeButton').addEventListener('click', function() {
+            const message = document.getElementById('message');
+            message.textContent = '축하합니다! JavaScript 이벤트가 작동했습니다!';
+            message.style.color = '#FF5722';
+        });
+    </script>
+</body>
+</html>
