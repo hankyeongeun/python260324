@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import pygame
 import random
 import sys
@@ -25,9 +26,13 @@ MAGENTA = (255, 0, 255)
 clock = pygame.time.Clock()
 FPS = 60
 
-# 폰트
-font_large = pygame.font.Font(None, 48)
-font_small = pygame.font.Font(None, 36)
+# 폰트 (한글 지원)
+try:
+    font_large = pygame.font.SysFont("Malgun Gothic", 48)
+    font_small = pygame.font.SysFont("Malgun Gothic", 36)
+except Exception:
+    font_large = pygame.font.Font(None, 48)
+    font_small = pygame.font.Font(None, 36)
 
 
 class Paddle:
