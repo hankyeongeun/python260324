@@ -12,4 +12,34 @@ soup = BeautifulSoup(page,"html.parser")
 # print(soup.prettify())
 
 #<p>를 모두 검색하기
-print(soup.find_all("p"))
+# print(soup.find_all("p"))
+
+# print(soup.find_all("p", class_="outer-test"))
+
+# print(soup.find_all("p", attrs={"class":"outer-text"}))
+
+# print(soup.find_all(id="first"))
+
+for tag in soup.find_all("p"):
+    title = tag.text.strip()
+    title = title.replace("\n","")
+    print(title)
+
+strA = "<<< python >>>"
+result = strA.strip("<>") 
+print(result)
+strB = result.replace("python", "python javascript")
+print(strB)
+result = "spam ham egg banana" .split()
+print(result)
+print(":)".join(result))
+
+
+import re
+
+result = re.search(r"\d{4}", "올해는 2026년입니다.")
+print(result.group())
+
+result = re.search("apple", "this is apple")
+print(result.group())
+
